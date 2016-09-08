@@ -52,7 +52,7 @@ systray.writeConfig("hiddenItems","org.kde.plasma.clipboard,kmix,KDE Daemon,org.
 systray.writeConfig("knownItems","org.kde.kdeconnect,org.kde.ktp-contactlist,org.kde.muonnotifier,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.volume")
 systray.writeConfig("shownItems", "transmission,cantata")
 
-panel.addWidget("org.kde.plasma.volume")
+//panel.addWidget("org.kde.plasma.volume")
 panel.addWidget("org.kde.plasma.digitalclock")
 panel.addWidget("org.kde.plasma.notifications")
 
