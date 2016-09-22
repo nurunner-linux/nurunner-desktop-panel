@@ -32,6 +32,10 @@ var kicker = panel.addWidget("org.kde.plasma.kicker")
 kicker.currentConfigGroup = ["Shortcuts"]
 kicker.writeConfig("global", "Alt+F1")
 
+pager = panel.addWidget("pager");
+pager.writeConfig("rows", "2");
+pager.writeConfig("hideWhenSingleDesktop", "true");
+
 var eitm = panel.addWidget("org.kde.plasma.expandingiconstaskmanager")
 eitm.currentConfigGroup = ["Configuration", "General"]
 eitm.writeConfig("launchers" ,"file:///usr/share/applications/org.kde.dolphin.desktop?wmClass=Dolphin,file:///usr/share/applications/firefox.desktop")
@@ -54,7 +58,7 @@ systray.writeConfig("shownItems", "transmission,cantata")
 
 //panel.addWidget("org.kde.plasma.volume")
 panel.addWidget("org.kde.plasma.digitalclock")
-panel.addWidget("org.kde.plasma.notifications")
+//panel.addWidget("org.kde.plasma.notifications")
 
 var krunnerIcon = panel.addWidget("org.kde.plasma.icon")
 krunnerIcon.currentConfigGroup = ["General"]
