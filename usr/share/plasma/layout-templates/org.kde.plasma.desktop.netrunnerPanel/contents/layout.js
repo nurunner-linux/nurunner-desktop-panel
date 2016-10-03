@@ -31,6 +31,8 @@ panel.height = gridUnit * 2.3
 var kicker = panel.addWidget("org.kde.plasma.kicker")
 kicker.currentConfigGroup = ["Shortcuts"]
 kicker.writeConfig("global", "Alt+F1")
+kicker.writeConfig("customButtonImage", "file:///usr/share/pixmaps/homerun.svg")
+kicker.writeConfig("useCustomButtonImage", true)
 
 pager = panel.addWidget("pager");
 pager.writeConfig("rows", "2");
