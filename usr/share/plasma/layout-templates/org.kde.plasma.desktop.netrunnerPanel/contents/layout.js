@@ -25,18 +25,17 @@ if (freeEdges["bottom"] == true) {
     panel.location = "top";
 }
 
+panel.height = gridUnit * 2.2
 
-panel.height = gridUnit * 2.3
-
-var kicker = panel.addWidget("org.kde.plasma.kicker")
-kicker.currentConfigGroup = ["Shortcuts"]
-kicker.writeConfig("global", "Alt+F1")
+var kickoff = panel.addWidget("org.kde.plasma.kicker")
+kickoff.currentConfigGroup = ["Shortcuts"]
+kickoff.writeConfig("global", "Alt+F1")
 kicker.writeConfig("customButtonImage", "file:///usr/share/pixmaps/homerun.svg")
 kicker.writeConfig("useCustomButtonImage", true)
 
-pager = panel.addWidget("pager");
-pager.writeConfig("rows", "2");
-pager.writeConfig("hideWhenSingleDesktop", "true");
+//panel.addWidget("org.kde.plasma.showActivityManager")
+
+panel.addWidget("org.kde.plasma.pager")
 
 var eitm = panel.addWidget("org.kde.plasma.expandingiconstaskmanager")
 eitm.currentConfigGroup = ["Configuration", "General"]
@@ -51,19 +50,6 @@ yakuakeIcon.writeConfig("genericName", "Drop-down Terminal")
 yakuakeIcon.writeConfig("iconName", "yakuake")
 yakuakeIcon.writeConfig("url", "/usr/share/applications/org.kde.yakuake.desktop")
 
-var systray = panel.addWidget("org.kde.plasma.systemtray")
-systray.currentConfigGroup = ["General"]
-systray.writeConfig("extraItems","org.kde.plasma.devicenotifier,org.kde.plasma.battery,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.ktp-contactlist,org.kde.plasma.ktplegacypresenceapplet,org.kde.muonnotifier,kde.muonnotifier")
-systray.writeConfig("hiddenItems","org.kde.plasma.clipboard,kmix,KDE Daemon,org.kde.ktp-contactlist,org.kde.plasma.volume,org.kde.plasma.notifications")
-systray.writeConfig("knownItems","org.kde.kdeconnect,org.kde.ktp-contactlist,org.kde.muonnotifier,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.volume")
-systray.writeConfig("shownItems", "transmission,cantata")
-
-//panel.addWidget("org.kde.plasma.volume")
+panel.addWidget("org.kde.plasma.systemtray")
 panel.addWidget("org.kde.plasma.digitalclock")
-//panel.addWidget("org.kde.plasma.notifications")
 
-var krunnerIcon = panel.addWidget("org.kde.plasma.icon")
-krunnerIcon.currentConfigGroup = ["General"]
-krunnerIcon.writeConfig("applicationName", "Krunner")
-krunnerIcon.writeConfig("iconName", "applications-system")
-krunnerIcon.writeConfig("url", "/usr/share/applications/krunner.desktop")
